@@ -34,7 +34,7 @@ const getProfilePage = async (userID: string, page: number): Promise<ProfilePage
   return { clips, hasNext };
 };
 
-export default async function getAllClips (userID: string) {
+export default async function getAllClips(userID: string) {
   let clipList: IClip[] = [];
   for (let page = 1;; page++) {
     const { clips, hasNext } = await getProfilePage(userID, page);
@@ -43,5 +43,5 @@ export default async function getAllClips (userID: string) {
       break;
     }
   }
-  console.log(clipList);
+  return clipList;
 };
