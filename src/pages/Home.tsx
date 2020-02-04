@@ -42,7 +42,7 @@ const Home: React.FC = () => {
 
   setInterval(
     onChangeVideo,
-    10000,
+    7000,
   );
 
   return (
